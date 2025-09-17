@@ -158,22 +158,38 @@ notifications:
     chat_id: "YOUR_CHAT_ID"
 ```
 
-## API文档
+## 命令行用法
 
-### 启动监控
-```python
-from src.main import ArbitrageMonitor
+项目包含Python和Go两套实现，均通过命令行进行演示。Python版本提供更丰富的模块化结构，而Go版本展示了如何在强类型语言中实现同样的流程。
 
-monitor = ArbitrageMonitor()
-monitor.start()
+### Python
+
+```bash
+# 运行监控循环
+python -m src.main monitor --cycles 5
+
+# 运行仪表板（终端输出摘要）
+python -m src.main dashboard --cycles 3
+
+# 运行简化回测
+python -m src.main backtest --start-date 2024-01-01 --end-date 2024-01-10
 ```
 
-### 获取套利机会
-```python
-from src.arbitrage.detector import ArbitrageDetector
+### Go
 
-detector = ArbitrageDetector()
-opportunities = detector.find_opportunities()
+```bash
+cd golang
+
+# 运行监控循环
+go run ./cmd/app monitor --cycles 5
+
+# 运行仪表板演示
+go run ./cmd/app dashboard --cycles 3
+
+# 运行简化回测
+go run ./cmd/app backtest --start 2024-01-01 --end 2024-01-10
+
+cd ..
 ```
 
 ## 安全注意事项

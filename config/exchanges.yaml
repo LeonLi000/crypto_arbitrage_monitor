@@ -1,0 +1,14 @@
+Dex:
+  - name: Uniswap
+    pairs: ["ETH/USDT", "BTC/USDT", "SOL/USDT"]
+  - name: SushiSwap
+    pairs: ["ETH/USDT", "BTC/USDT"]
+  - name: PancakeSwap
+    pairs: ["BNB/USDT", "ETH/USDT"]
+Cex:
+  - name: Binance
+    pairs: ["ETH/USDT", "BTC/USDT", "SOL/USDT"]
+  - name: Coinbase
+    pairs: ["ETH/USDT", "BTC/USDT"]
+  - name: Kraken
+    pairs: ["ETH/USDT", "BTC/USDT", "SOL/USDT"]
