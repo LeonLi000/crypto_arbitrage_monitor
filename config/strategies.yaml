@@ -1,0 +1,6 @@
+strategies:
+  - name: confidence_weighted
+    max_trade_size: 10000
+  - name: fixed_fraction
+    fraction: 0.1
+    max_trade_size: 2000
